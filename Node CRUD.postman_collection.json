@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "92c748cd-d6a5-4059-aa0a-275cb09f51e3",
+		"name": "Node CRUD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8752888",
+		"_collection_link": "https://bhishieapp.postman.co/workspace/New-Team-Workspace~9ba727fc-63c6-41cc-9b55-ccd035095c13/collection/8752888-92c748cd-d6a5-4059-aa0a-275cb09f51e3?action=share&source=collection_link&creator=8752888"
+	},
+	"item": [
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}",
+					"host": [
+						"{{local}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Setup a call with Abhishek\",\r\n    \"description\": \"discuss event, plan the ppt, schedule live setup with volunteer team\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{local}}/task/create",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"task",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-tasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{local}}/task/get",
+					"host": [
+						"{{local}}"
+					],
+					"path": [
+						"task",
+						"get"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "local",
+			"value": "http://localhost:8000/",
+			"type": "string"
+		}
+	]
+}
